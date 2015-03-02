@@ -1,0 +1,7 @@
+# -*- coding: UTF-8 -*-
+#requirement.txt
+Django==1.7.5
+bootstrap-admin
+
+#Install production dependencies only.
+#-r requirements/prod.txt

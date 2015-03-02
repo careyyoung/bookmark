@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="icon" href="{{STATIC_URL}}img/favicon.ico">
+<title>{% block title %}Insert title here{% endblock %}</title>
+{% block extrahead %}{% endblock %}
+</head>
+<body>
+	{% block content %}{% endblock %}
+
+	<script src="{{STATIC_URL}}js/jquery-1.11.2.js"></script>
+	<script src="{{STATIC_URL}}js/bootstrap.js"></script>
+</body>
+</html>
