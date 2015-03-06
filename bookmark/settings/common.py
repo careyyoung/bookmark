@@ -31,7 +31,11 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'pagedown',
+    'markdown_deux',
+    'rest_framework',
     'bm1',
+    
 )
 
 MIDDLEWARE_CLASSES = (
@@ -57,11 +61,12 @@ LANGUAGE_CODE = 'zh-cn'
 
 TIME_ZONE = 'Asia/Shanghai'
 
+
 USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+USE_TZ = False
 
 
 # Static files (CSS, JavaScript, Images)
@@ -75,6 +80,8 @@ STATICFILES_DIRS = (
     ("img", os.path.join(STATIC_ROOT, 'img')),
 )
 
+
+
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 MEDIA_DIRS = (
@@ -83,6 +90,7 @@ MEDIA_DIRS = (
 
 TEMPLATE_DIRS = (
     os.path.join(BASE_DIR, 'templates').replace('\\', '/'),  # 把模板文件放project下的 templates文件夹
+    # os.path.join(BASE_DIR, 'bm1/templates').replace('\\', '/'),
 )
 
 

@@ -1,0 +1,30 @@
+{# templates/{{app_name}}/hello.html #}
+{# 将 app_name 替换为对应的 app_name #}
+{% extends "bm1/dashboard.html" %}
+{% load markdown_deux_tags %}
+
+{% block title %}Note_demo{% endblock %}
+{% block extrahead1 %}
+<link href="{{STATIC_URL}}css/blog.css" rel="stylesheet">
+<link href="{{STATIC_URL}}css/emacs.css" rel="stylesheet" type="text/css" >
+{% endblock %}
+{% block Dashboard1 %}
+<h1 class="blog-title">{{note.title|markdown}}</h1>
+<p class="lead blog-description">副标题</p>
+<p class="blog-post-meta"> {{ note.create_time|safe|markdown }}</p>
+<hr />
+{{ note.content|markdown:'codehilite' }}
+
+
+	<nav>
+           <ul class="pager">
+             <li><a href="#">Previous</a></li>
+             <li><a href="#">Next</a></li>
+           </ul>
+    </nav>
+    <hr />
+{% endblock %}
+{% block bodyscript1 %}
+
+
+{% endblock%}

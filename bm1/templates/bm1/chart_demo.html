@@ -1,0 +1,40 @@
+{# templates/{{app_name}}/hello.html #}
+{# 将 app_name 替换为对应的 app_name #}
+{% extends "bm1/dashboard.html" %}
+
+{% block title %}Chart.js折线图DEMO演示{% endblock %}
+{% block extrahead1 %}
+	<style>
+		canvas{
+		}
+	</style>
+	<script src="{{STATIC_URL}}js/Chart.js"></script>
+{% endblock %}
+{% block Dashboard1 %}
+<canvas id="canvas1" height="450" width="800"></canvas>
+</br>
+{% endblock %}
+{% block bodyscript1 %}
+<script>
+		var lineChartData = {
+			labels : {{labels|safe}},
+			datasets : [
+				{% for x in data_list %}
+				{
+					fillColor : "{{x.fillColor}}",
+					strokeColor : "{{x.strokeColor}}",
+					pointColor : "{{x.pointColor}}",
+					pointStrokeColor : "{{x.pointStrokeColor}}",
+					data : {{x.data}}
+				},
+				{% endfor%}
+			]
+			
+		};
+
+	var myLine = new Chart(document.getElementById("canvas1").getContext("2d")).Line(lineChartData);
+ 
+	</script>
+
+
+{% endblock%}
