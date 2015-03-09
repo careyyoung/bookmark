@@ -1,7 +1,7 @@
 # -*- coding: UTF-8 -*-
 from django.shortcuts import render
 from django.shortcuts import render_to_response,RequestContext
-from bm1.models import bookmarks1,sale_orders1,citys1,Note
+from bm1.models import bookmarks1,sale_orders1,citys1,Note,ContactForm
 
 # Create your views here.
 
@@ -70,6 +70,3 @@ def chart_demo(request):
 def note_demo(request):
     note = Note.objects.get(id=4)
     return render(request, 'bm1/note_demo.html',{"note":note})
-
-
-

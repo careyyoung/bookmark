@@ -1,6 +1,8 @@
 # -*- coding: UTF-8 -*-
 from django.db import models
 from django.utils import timezone
+from django import forms
+from django.forms import ModelForm
 # Create your models here.
 
 
@@ -83,8 +85,4 @@ class Note(models.Model):
     
     def __unicode__(self):
         return "%s~~~~%s" % (self.title, self.create_time)
-
-
-
-
 

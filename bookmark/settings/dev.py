@@ -10,7 +10,6 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 """
 from bookmark.settings.common import *
 
-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 

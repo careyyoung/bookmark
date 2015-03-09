@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	{% load bookmark_tags%}
+	
+	<table border="1" cellpadding="10" >
+		<caption>request对象中取出的值</caption>
+		<tr>
+  			<th>序号</th>
+  			<th>名称</th>
+  			<th>内容</th>
+		</tr>
+		{% for key,value in dict1.items %}
+		<tr>
+			<td>{{ forloop.counter }}: </td> 
+			<td>{{ key }}:  </td>
+			<td title="{{ value}}">{{ value|truncate_chars:50 }} </td>
+		</tr>
+		{% empty %}
+			empty
+		{% endfor%}
+	</table>
+	
+</body>
+</html>

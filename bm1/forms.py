@@ -12,3 +12,4 @@ class NoteForm(forms.ModelForm):
     content = forms.CharField(widget=AdminPagedownWidget())
     class Meta:
         model = Note
+        fields = ('title', 'content', 'create_time') 

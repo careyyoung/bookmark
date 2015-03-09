@@ -35,7 +35,7 @@ INSTALLED_APPS = (
     'markdown_deux',
     'rest_framework',
     'bm1',
-    
+    'testApp1',
 )
 
 MIDDLEWARE_CLASSES = (
